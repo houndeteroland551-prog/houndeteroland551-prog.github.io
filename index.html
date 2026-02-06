@@ -1,109 +1,262 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Mon Portfolio</title>
-    <style>
-        /* Style simple */
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        header {
-            text-align: center;
-            padding: 40px 0;
-            background: white;
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
-        h1 {
-            color: #333;
-        }
-        .job {
-            color: #666;
-            font-size: 1.2em;
-        }
-        .about {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-        .projects {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .project {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            width: 100%;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        img {
-            max-width: 100%;
-            border-radius: 5px;
-        }
-        .contact {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 30px;
-        }
-        a {
-            color: #0077cc;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roland Houndete | Statisticien & Data Analyst</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blue: #1f4fd8;
+      --dark: #1f2933;
+      --gray: #6b7280;
+      --light: #f5f7fa;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: var(--gray);
+      max-width: 900px;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--blue), #153aa8);
+      color: var(--white);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .hero h2 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 6px;
+      background: var(--white);
+      color: var(--blue);
+      font-weight: 600;
+      margin-right: 15px;
+      margin-top: 20px;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      border: 2px solid var(--white);
+      color: var(--white);
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    /* SKILLS */
+    .skills span {
+      display: inline-block;
+      background: #e8ecf7;
+      color: var(--blue);
+      padding: 8px 14px;
+      border-radius: 20px;
+      margin: 5px;
+      font-size: 0.9rem;
+    }
+
+    /* CONTACT */
+    .contact a {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--blue);
+      font-weight: 500;
+    }
+
+    footer {
+      background: var(--dark);
+      color: var(--white);
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    @media(max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>👋 Bonjour, je suis [TON PRÉNOM]</h1>
-        <p class="job">[TON MÉTIER] | [TA SPÉCIALITÉ]</p>
-        <p>Bienvenue sur mon portfolio !</p>
-    </header>
 
-    <section class="about">
-        <h2>📖 À propos de moi</h2>
-        <p>Je suis passionné(e) par [ton domaine]. J'aime créer [ce que tu fais].</p>
-        <p>Avec [X années] d'expérience dans [ton secteur], j'ai travaillé sur [type de projets].</p>
-    </section>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Statisticien Appliqué & Analyste de Données</h1>
+    <h2>De la donnée brute à la décision éclairée</h2>
+    <p>
+      J’accompagne étudiants et professionnels dans l’analyse, l’interprétation
+      et la valorisation de leurs données à l’aide de méthodes statistiques rigoureuses.
+    </p>
+    <a href="#services" class="btn">Voir mes services</a>
+    <a href="#contact" class="btn secondary">Me contacter</a>
+  </div>
+</section>
 
-    <section>
-        <h2>🚀 Mes Projets</h2>
-        <div class="projects">
-            <div class="project">
-                <h3>Projet 1</h3>
-                <p>Description de ton premier projet. Explique ce que tu as fait et pourquoi.</p>
-                <p><strong>Technologies :</strong> HTML, CSS, JavaScript</p>
-            </div>
-            
-            <div class="project">
-                <h3>Projet 2</h3>
-                <p>Description de ton deuxième projet. Quel était l'objectif ?</p>
-                <p><strong>Technologies :</strong> React, Node.js</p>
-            </div>
-            
-            <div class="project">
-                <h3>Projet 3</h3>
-                <p>Description de ton troisième projet. Quels défis as-tu relevés ?</p>
-                <p><strong>Technologies :</strong> Python, Django</p>
-            </div>
-        </div>
-    </section>
+<!-- ABOUT -->
+<section id="about">
+  <h2>À propos</h2>
+  <p>
+    Bonjour et bienvenue sur mon portfolio.  
+    Je suis <strong>Houndete Ogougara Roland</strong>, statisticien appliqué et analyste
+    de données avec plus de 3 ans d’expérience en analyse statistique,
+    interprétation de données et accompagnement académique.
+    Mon objectif est de fournir un travail clair, précis et structuré,
+    permettant une réelle compréhension des données.
+  </p>
+</section>
 
-    <section class="contact">
-        <h2>📞 Contact</h2>
-        <p>📧 Email : <a href="mailto:ton@email.com">ton@email.com</a></p>
-        <p>🐱 GitHub : <a href="https://github.com/tonpseudo">github.com/tonpseudo</a></p>
-        <p>💼 LinkedIn : <a href="#">ton profil LinkedIn</a></p>
-    </section>
+<!-- SERVICES -->
+<section id="services">
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Analyse statistique</h3>
+      <p>Statistiques descriptives, inférentielles, tests d’hypothèses, régression.</p>
+    </div>
+    <div class="card">
+      <h3>Interprétation des données</h3>
+      <p>Visualisations claires, graphiques professionnels et analyses structurées.</p>
+    </div>
+    <div class="card">
+      <h3>Soutien académique</h3>
+      <p>Accompagnement en mathématiques et statistiques (lycée et université).</p>
+    </div>
+    <div class="card">
+      <h3>Relecture scientifique</h3>
+      <p>Correction et amélioration de documents scientifiques et statistiques.</p>
+    </div>
+    <div class="card">
+      <h3>Visualisation de données</h3>
+      <p>Tableaux et graphiques professionnels sous Excel ou logiciels statistiques.</p>
+    </div>
+  </div>
+</section>
 
-    <footer style="text-align: center; margin-top: 40px; color: #666;">
-        <p>© 2024 [Ton Prénom Nom]. Tous droits réservés.</p>
-    </footer>
+<!-- TOOLS -->
+<section>
+  <h2>Outils maîtrisés</h2>
+  <div class="skills">
+    <span>R (RStudio)</span>
+    <span>Python</span>
+    <span>Stata</span>
+    <span>SPSS</span>
+    <span>Excel</span>
+    <span>Word</span>
+    <span>PowerPoint</span>
+  </div>
+</section>
+
+<!-- WHY ME -->
+<section>
+  <h2>Pourquoi travailler avec moi ?</h2>
+  <div class="grid">
+    <div class="card">✔ Travail fiable et minutieux</div>
+    <div class="card">✔ Respect strict des délais</div>
+    <div class="card">✔ Communication claire et réactive</div>
+    <div class="card">✔ Solutions adaptées à vos objectifs</div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+  <h2>Projets</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Analyse de régression (R)</h3>
+      <p>Analyse complète avec interprétation et visualisation des résultats.</p>
+    </div>
+    <div class="card">
+      <h3>Dashboard Excel</h3>
+      <p>Suivi d’indicateurs clés à l’aide de tableaux et graphiques dynamiques.</p>
+    </div>
+    <div class="card">
+      <h3>Rapport statistique SPSS</h3>
+      <p>Tests d’hypothèses, graphiques et interprétation détaillée.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>Je serais ravi de vous aider à transformer vos données en informations exploitables.</p>
+  <a href="mailto:houndeteroland551@gmail.com">📧 houndeteroland551@gmail.com</a>
+  <a href="tel:+2290168784884">📞 +229 01 68 78 48 84</a>
+  <a href="https://www.upwork.com/freelancers/~01bd4c97f21a82c7d9" target="_blank">🌍 Profil Upwork</a>
+  <a href="https://www.linkedin.com/in/roland-houndete-a77807285" target="_blank">🔗 LinkedIn</a>
+</section>
+
+<footer>
+  © 2026 — Houndete Ogougara Roland | Statisticien & Data Analyst
+</footer>
+
 </body>
 </html>
