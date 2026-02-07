@@ -3,54 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Roland HOUNDETE - Statisticien Appliqué & Analyste de Données. Services d'analyse statistique, visualisation de données et conseil en statistiques.">
-    <title>Roland HOUNDETE | Statisticien & Analyste de Données</title>
+    <meta name="description" content="Roland HOUNDETE - Statisticien Appliqué & Analyste de Données. Expert en analyse statistique, visualisation de données et conseil en statistiques.">
+    <title>Roland HOUNDETE | Statisticien Appliqué & Analyste de Données</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <style>
-        /* Variables Design System */
+        /* Variables et Reset */
         :root {
-            /* Couleurs - Ton thème sombre élégant */
-            --primary: #0f172a;
-            --primary-light: #1e293b;
-            --accent: #3b82f6;
-            --accent-dark: #2563eb;
-            --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --primary-light: #3b82f6;
+            --secondary: #475569;
+            --accent: #0ea5e9;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-400: #94a3b8;
+            --gray-500: #64748b;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1e293b;
+            --gray-900: #0f172a;
             
-            /* Textes */
-            --text: #0f172a;
-            --text-light: #64748b;
-            --text-on-dark: #f8fafc;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
             
-            /* Backgrounds */
-            --bg: #ffffff;
-            --bg-alt: #f8fafc;
-            --bg-dark: #0f172a;
-            --bg-dark-light: #1e293b;
+            --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
             
-            /* Bordures */
-            --border: #e2e8f0;
-            --border-dark: rgba(255, 255, 255, 0.1);
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            --radius-2xl: 1.5rem;
             
-            /* Typographie */
-            --font-display: 'DM Serif Display', serif;
-            --font-body: 'Inter', sans-serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
             
-            /* Ombres - Nouveau système */
-            --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.05);
-            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
-            --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-            
-            /* Effets */
-            --backdrop-blur: blur(12px);
-            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Reset & Base */
         * {
             margin: 0;
             padding: 0;
@@ -63,55 +67,113 @@
         }
 
         body {
-            font-family: var(--font-body);
-            color: var(--text);
-            line-height: 1.7;
-            background: var(--bg);
+            font-family: var(--font-sans);
+            color: var(--gray-800);
+            background: var(--light);
+            line-height: 1.6;
             overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
         }
 
-        /* Container */
+        /* Typographie */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dark);
+        }
+
+        h1 { font-size: 3.5rem; }
+        h2 { font-size: 2.5rem; }
+        h3 { font-size: 1.875rem; }
+        h4 { font-size: 1.5rem; }
+        h5 { font-size: 1.25rem; }
+        h6 { font-size: 1rem; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            h3 { font-size: 1.5rem; }
+        }
+
+        /* Layout */
         .container {
             max-width: 1280px;
             margin: 0 auto;
             padding: 0 2rem;
         }
 
-        /* Typographie */
-        h1, h2, h3, h4 {
-            font-family: var(--font-display);
-            font-weight: 400;
-            line-height: 1.2;
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
         }
 
-        h1 { font-size: 4.5rem; }
-        h2 { font-size: 3.5rem; }
-        h3 { font-size: 2rem; }
-        h4 { font-size: 1.5rem; }
+        /* Sections */
+        section {
+            padding: 6rem 0;
+        }
 
         @media (max-width: 768px) {
-            h1 { font-size: 3rem; }
-            h2 { font-size: 2.5rem; }
-            h3 { font-size: 1.75rem; }
+            section {
+                padding: 4rem 0;
+            }
         }
 
-        /* Header - Version améliorée */
+        /* Boutons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.75rem;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 0.9375rem;
+            text-decoration: none;
+            transition: var(--transition-fast);
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(37, 99, 235, 0.1);
+            transform: translateY(-1px);
+        }
+
+        /* Header */
         .header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: var(--backdrop-blur);
             z-index: 1000;
-            border-bottom: 1px solid var(--border);
-            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+            transition: var(--transition-base);
         }
 
         .header.scrolled {
-            box-shadow: var(--shadow-lg);
-            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-sm);
         }
 
         .header-container {
@@ -128,47 +190,37 @@
             text-decoration: none;
         }
 
-        .logo-mark {
-            width: 44px;
-            height: 44px;
+        .logo-icon {
+            width: 36px;
+            height: 36px;
             background: var(--primary);
-            border-radius: 10px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: var(--font-display);
-            font-size: 1.375rem;
-            font-weight: 700;
             color: white;
-            transition: var(--transition);
+            font-weight: 700;
+            font-family: var(--font-mono);
         }
 
-        .logo:hover .logo-mark {
-            background: var(--accent);
-            transform: rotate(5deg);
+        .logo-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dark);
         }
 
-        .logo-name {
-            font-weight: 600;
-            color: var(--text);
-            font-size: 1.125rem;
-        }
-
-        /* Navigation - Version améliorée */
-        .nav-list {
+        .nav {
             display: flex;
-            list-style: none;
             gap: 2.5rem;
         }
 
         .nav-link {
-            text-decoration: none;
-            color: var(--text-light);
             font-weight: 500;
+            color: var(--gray-600);
+            text-decoration: none;
             position: relative;
             padding: 0.5rem 0;
-            transition: var(--transition);
-            font-size: 0.9375rem;
+            transition: var(--transition-fast);
         }
 
         .nav-link::after {
@@ -178,29 +230,91 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--accent);
-            transition: width 0.3s ease;
+            background: var(--primary);
+            transition: var(--transition-fast);
         }
 
         .nav-link:hover {
-            color: var(--text);
+            color: var(--primary);
         }
 
         .nav-link:hover::after {
             width: 100%;
         }
 
-        /* Hero Section - Version FUSION */
+        .nav-link.active {
+            color: var(--primary);
+        }
+
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+
+        .mobile-menu-toggle span {
+            width: 24px;
+            height: 2px;
+            background: var(--gray-700);
+            transition: var(--transition-fast);
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                box-shadow: var(--shadow-lg);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition-base);
+            }
+            
+            .nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .mobile-menu-toggle {
+                display: flex;
+            }
+            
+            .mobile-menu-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translateY(8px);
+            }
+            
+            .mobile-menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .mobile-menu-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translateY(-8px);
+            }
+        }
+
+        /* Hero Section */
         .hero {
-            position: relative;
             min-height: 100vh;
             display: flex;
             align-items: center;
             padding-top: 80px;
-            background: linear-gradient(135deg, 
-                #f8fafc 0%, 
-                #f1f5f9 50%, 
-                #e2e8f0 100%);
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            position: relative;
             overflow: hidden;
         }
 
@@ -210,18 +324,844 @@
             left: 0;
             right: 0;
             bottom: 0;
+            opacity: 0.1;
             background-image: 
-                radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+                radial-gradient(var(--gray-400) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
         }
 
         .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 900px;
             animation: fadeInUp 1s ease-out;
         }
 
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(37, 99, 235, 0.2);
+        }
+
+        .hero-badge svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .hero-title {
+            margin-bottom: 1.5rem;
+            font-size: 3.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-title .gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.125rem;
+            }
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            font-family: var(--font-mono);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        @media (max-width: 768px) {
+            .hero-stats {
+                justify-content: center;
+                gap: 2rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+
+        .hero-visual {
+            position: relative;
+            height: 500px;
+        }
+
+        .data-visualization {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .chart-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 300px;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-subtitle {
+            display: inline-block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        @media (max-width: 1024px) {
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        .about-content p {
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-highlights {
+            margin-top: 2rem;
+        }
+
+        .highlight {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+            transition: var(--transition-fast);
+        }
+
+        .highlight:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary-light);
+            box-shadow: var(--shadow-md);
+        }
+
+        .highlight-icon {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .highlight-icon svg {
+            width: 24px;
+            height: 24px;
+            color: var(--primary);
+        }
+
+        .highlight-content h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-content p {
+            margin: 0;
+            font-size: 0.9375rem;
+            color: var(--gray-600);
+        }
+
+        .skills-radar {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .skills-radar svg {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--gray-50);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--gray-200);
+            transition: var(--transition-base);
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-light);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon svg {
+            width: 32px;
+            height: 32px;
+            color: var(--primary);
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+        }
+
+        .service-description {
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-details {
+            list-style: none;
+        }
+
+        .service-details li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--gray-700);
+        }
+
+        .service-details li svg {
+            width: 16px;
+            height: 16px;
+            color: var(--success);
+        }
+
+        /* Tools Section */
+        .tools {
+            background: white;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .tools-category h3 {
+            margin-bottom: 1.5rem;
+            color: var(--gray-800);
+        }
+
+        .tool-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .tool-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+            transition: var(--transition-fast);
+        }
+
+        .tool-card:hover {
+            background: white;
+            border-color: var(--primary-light);
+            box-shadow: var(--shadow-md);
+            transform: translateX(4px);
+        }
+
+        .tool-logo {
+            width: 48px;
+            height: 48px;
+            background: white;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--gray-200);
+            padding: 0.5rem;
+        }
+
+        .tool-logo svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .tool-info {
+            flex: 1;
+        }
+
+        .tool-info h4 {
+            margin-bottom: 0.25rem;
+            font-size: 1rem;
+        }
+
+        .tool-info p {
+            font-size: 0.875rem;
+            color: var(--gray-500);
+        }
+
+        .skill-level {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-dots {
+            display: flex;
+            gap: 4px;
+        }
+
+        .skill-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--gray-300);
+        }
+
+        .skill-dot.active {
+            background: var(--primary);
+        }
+
+        /* Projects Section */
+        .projects {
+            background: var(--gray-50);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .project-card {
+            background: white;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            border: 1px solid var(--gray-200);
+            transition: var(--transition-base);
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-light);
+        }
+
+        .project-visual {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.1;
+            background-image: 
+                radial-gradient(white 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: var(--gray-100);
+            color: var(--gray-700);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border: 1px solid var(--gray-200);
+        }
+
+        .tag.primary {
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+            border-color: rgba(37, 99, 235, 0.2);
+        }
+
+        .project-card h3 {
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+        }
+
+        .project-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+
+        .meta-item svg {
+            width: 16px;
+            height: 16px;
+            color: var(--gray-500);
+        }
+
+        /* Process Section */
+        .process {
+            background: white;
+        }
+
+        .process-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            left: 32px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--gray-200);
+        }
+
+        @media (max-width: 768px) {
+            .process-timeline::before {
+                left: 28px;
+            }
+        }
+
+        .process-step {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .step-number {
+            width: 64px;
+            height: 64px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
+            box-shadow: var(--shadow-md);
+        }
+
+        .step-content {
+            padding-top: 0.75rem;
+        }
+
+        .step-content h3 {
+            margin-bottom: 0.75rem;
+        }
+
+        .step-content p {
+            color: var(--gray-600);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--gray-50);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        @media (max-width: 1024px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--gray-700);
+            font-size: 0.9375rem;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            padding: 0.875rem 1rem;
+            border: 2px solid var(--gray-300);
+            border-radius: var(--radius-md);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            transition: var(--transition-fast);
+            background: white;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-icon svg {
+            width: 24px;
+            height: 24px;
+            color: var(--primary);
+        }
+
+        .contact-text {
+            flex: 1;
+        }
+
+        .contact-label {
+            font-size: 0.875rem;
+            color: var(--gray-500);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-text a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-fast);
+        }
+
+        .contact-text a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        .footer-brand .logo-text {
+            color: white;
+        }
+
+        .footer-tagline {
+            color: var(--gray-400);
+            margin-top: 1rem;
+        }
+
+        .footer-links h4,
+        .footer-social h4 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--gray-400);
+            text-decoration: none;
+            transition: var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--gray-400);
+            text-decoration: none;
+            transition: var(--transition-fast);
+        }
+
+        .social-link:hover {
+            color: white;
+        }
+
+        .social-link svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-800);
+            text-align: center;
+            color: var(--gray-500);
+            font-size: 0.875rem;
+        }
+
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-base);
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            width: 56px;
+            height: 56px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-lg);
+            z-index: 999;
+            transition: var(--transition-base);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -233,1006 +1173,13 @@
             }
         }
 
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.625rem 1.25rem;
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            margin-bottom: 2.5rem;
-            color: var(--text-light);
-            backdrop-filter: blur(10px);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .badge-dot {
-            width: 8px;
-            height: 8px;
-            background: #10b981;
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-
         @keyframes pulse {
             0%, 100% {
-                transform: scale(1);
                 opacity: 1;
             }
             50% {
-                transform: scale(1.2);
-                opacity: 0.7;
+                opacity: 0.5;
             }
-        }
-
-        .hero-title {
-            font-size: 4.5rem;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            color: var(--text);
-        }
-
-        .gradient-text {
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-subtitle {
-            font-size: 1.375rem;
-            color: var(--text-light);
-            margin-bottom: 3rem;
-            font-weight: 400;
-            max-width: 700px;
-        }
-
-        /* Stats - Nouveau design */
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 3rem;
-            margin-bottom: 3rem;
-            padding: 2.5rem;
-            background: white;
-            border-radius: 20px;
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow);
-        }
-
-        .stat-item {
-            text-align: center;
-            position: relative;
-        }
-
-        .stat-item:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            right: -1.5rem;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 1px;
-            height: 40px;
-            background: var(--border);
-        }
-
-        .stat-number {
-            font-family: var(--font-display);
-            font-size: 3.5rem;
-            font-weight: 400;
-            color: var(--text);
-            line-height: 1;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 0.875rem;
-            color: var(--text-light);
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        /* CTA Buttons - Version améliorée */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1rem 2rem;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: white;
-            box-shadow: var(--shadow);
-        }
-
-        .btn-primary:hover {
-            background: var(--accent);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn-primary::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.6s;
-        }
-
-        .btn-primary:hover::after {
-            left: 100%;
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--text);
-            border: 1px solid var(--border);
-        }
-
-        .btn-secondary:hover {
-            background: var(--bg-alt);
-            border-color: var(--text-light);
-            transform: translateY(-2px);
-        }
-
-        /* Sections */
-        section {
-            padding: 7rem 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 5rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .section-label {
-            display: inline-block;
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 1rem;
-        }
-
-        .section-title {
-            margin-bottom: 1.5rem;
-            color: var(--text);
-        }
-
-        .section-description {
-            color: var(--text-light);
-            font-size: 1.25rem;
-            line-height: 1.7;
-        }
-
-        /* About Section - Version FUSION */
-        .about {
-            background: var(--bg-alt);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--accent), transparent);
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 5rem;
-            align-items: start;
-            position: relative;
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-            color: var(--text-light);
-            font-size: 1.125rem;
-            line-height: 1.8;
-        }
-
-        .about-text p:first-of-type {
-            font-size: 1.375rem;
-            font-weight: 500;
-            color: var(--text);
-        }
-
-        /* Skills Radar - Version améliorée */
-        .skills-visual {
-            position: sticky;
-            top: 100px;
-        }
-
-        .skills-radar {
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-
-        .radar-container {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 1;
-        }
-
-        .radar-svg {
-            width: 100%;
-            height: 100%;
-            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
-        }
-
-        .radar-label {
-            position: absolute;
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--text);
-            background: white;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-sm);
-            white-space: nowrap;
-        }
-
-        /* Services Section - Version FUSION */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            border: 1px solid var(--border);
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--accent-gradient);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-2xl);
-        }
-
-        .service-icon {
-            width: 64px;
-            height: 64px;
-            background: var(--bg-alt);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            transition: var(--transition);
-        }
-
-        .service-card:hover .service-icon {
-            background: var(--accent);
-            transform: rotate(10deg);
-        }
-
-        .service-icon svg {
-            width: 32px;
-            height: 32px;
-            color: var(--accent);
-            transition: var(--transition);
-        }
-
-        .service-card:hover .service-icon svg {
-            color: white;
-        }
-
-        .service-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--text);
-        }
-
-        .service-description {
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-
-        .service-features {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .service-features li {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text-light);
-            font-size: 0.9375rem;
-        }
-
-        .service-features li::before {
-            content: '';
-            width: 6px;
-            height: 6px;
-            background: var(--accent);
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
-
-        /* Tools Section - Version FUSION (Dark theme) */
-        .tools {
-            background: var(--bg-dark);
-            color: var(--text-on-dark);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .tools::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--accent), transparent);
-        }
-
-        .tools .section-label {
-            color: var(--accent);
-        }
-
-        .tools .section-title {
-            color: white;
-        }
-
-        .tools .section-description {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .tools-showcase {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .tool-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-dark);
-            border-radius: 20px;
-            padding: 2.5rem;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .tool-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--accent-gradient);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .tool-card:hover::before {
-            opacity: 0.1;
-        }
-
-        .tool-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(59, 130, 246, 0.3);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-        }
-
-        .tool-header {
-            display: flex;
-            align-items: center;
-            gap: 1.25rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .tool-logo {
-            width: 56px;
-            height: 56px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: white;
-            transition: var(--transition);
-        }
-
-        .tool-card:hover .tool-logo {
-            background: var(--accent);
-            transform: scale(1.1);
-        }
-
-        .tool-info h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-            color: white;
-        }
-
-        .tool-category {
-            font-size: 0.875rem;
-            color: rgba(255, 255, 255, 0.6);
-            font-weight: 500;
-        }
-
-        .tool-features {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .tool-features li {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-size: 0.9375rem;
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .tool-features li::before {
-            content: '';
-            width: 6px;
-            height: 6px;
-            background: var(--accent);
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
-
-        /* Projects Section - Version FUSION */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 24px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .project-card:hover {
-            transform: translateY(-12px);
-            box-shadow: var(--shadow-2xl);
-        }
-
-        .project-visual {
-            width: 100%;
-            aspect-ratio: 16/9;
-            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-visual::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.1) 50%, transparent 60%);
-            animation: shine 3s infinite;
-        }
-
-        @keyframes shine {
-            0% {
-                transform: translateX(-100%);
-            }
-            100% {
-                transform: translateX(100%);
-            }
-        }
-
-        .project-graph {
-            width: 80%;
-            height: 80%;
-            margin: 10% auto;
-        }
-
-        .project-content {
-            padding: 2.5rem;
-        }
-
-        .project-tags {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .tag {
-            padding: 0.5rem 1rem;
-            background: var(--bg-alt);
-            color: var(--text-light);
-            border-radius: 50px;
-            font-size: 0.8125rem;
-            font-weight: 500;
-            border: 1px solid var(--border);
-        }
-
-        .tag-primary {
-            background: var(--accent);
-            color: white;
-            border-color: var(--accent);
-        }
-
-        .project-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--text);
-        }
-
-        .project-description {
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-
-        .project-meta {
-            display: grid;
-            gap: 0.75rem;
-            font-size: 0.875rem;
-            color: var(--text-light);
-        }
-
-        .project-meta-item {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .check-icon {
-            width: 18px;
-            height: 18px;
-            color: #10b981;
-        }
-
-        /* Why Me Section - Version FUSION */
-        .why-me {
-            background: var(--bg-alt);
-            position: relative;
-        }
-
-        .why-me::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--accent), transparent);
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .why-card {
-            background: white;
-            padding: 3rem 2.5rem;
-            border-radius: 20px;
-            border: 1px solid var(--border);
-            transition: var(--transition);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .why-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-2xl);
-        }
-
-        .why-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: var(--accent-gradient);
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-        }
-
-        .why-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .why-icon {
-            width: 72px;
-            height: 72px;
-            background: var(--bg-alt);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            transition: var(--transition);
-        }
-
-        .why-card:hover .why-icon {
-            background: var(--accent);
-            transform: scale(1.1);
-        }
-
-        .why-icon svg {
-            width: 32px;
-            height: 32px;
-            color: var(--accent);
-            transition: var(--transition);
-        }
-
-        .why-card:hover .why-icon svg {
-            color: white;
-        }
-
-        .why-title {
-            font-size: 1.375rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--text);
-        }
-
-        .why-description {
-            color: var(--text-light);
-            line-height: 1.7;
-        }
-
-        /* Testimonial - Nouveau design */
-        .testimonial {
-            max-width: 900px;
-            margin: 6rem auto 0;
-            text-align: center;
-            padding: 4rem;
-            background: white;
-            border-radius: 24px;
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-xl);
-            position: relative;
-        }
-
-        .testimonial::before {
-            content: '"';
-            position: absolute;
-            top: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-family: var(--font-display);
-            font-size: 8rem;
-            color: var(--accent);
-            opacity: 0.1;
-        }
-
-        .testimonial-quote {
-            font-family: var(--font-display);
-            font-size: 1.75rem;
-            font-style: italic;
-            color: var(--text);
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Contact Section - Version FUSION */
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 5rem;
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1.75rem;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-
-        .form-label {
-            font-weight: 500;
-            color: var(--text);
-            font-size: 0.9375rem;
-        }
-
-        .form-input,
-        .form-select,
-        .form-textarea {
-            padding: 1.125rem 1.5rem;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            font-family: var(--font-body);
-            font-size: 1rem;
-            transition: var(--transition);
-            background: white;
-        }
-
-        .form-input:focus,
-        .form-select:focus,
-        .form-textarea:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
-        }
-
-        .contact-info-title {
-            font-size: 1.75rem;
-            font-weight: 600;
-            margin-bottom: 2.5rem;
-            color: var(--text);
-        }
-
-        .contact-details {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .contact-item {
-            display: flex;
-            gap: 1.25rem;
-            align-items: flex-start;
-            padding: 1.5rem;
-            background: white;
-            border-radius: 16px;
-            border: 1px solid var(--border);
-            transition: var(--transition);
-        }
-
-        .contact-item:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--accent);
-        }
-
-        .contact-icon {
-            width: 56px;
-            height: 56px;
-            background: var(--bg-alt);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            transition: var(--transition);
-        }
-
-        .contact-item:hover .contact-icon {
-            background: var(--accent);
-        }
-
-        .contact-icon svg {
-            width: 24px;
-            height: 24px;
-            color: var(--accent);
-            transition: var(--transition);
-        }
-
-        .contact-item:hover .contact-icon svg {
-            color: white;
-        }
-
-        .contact-text {
-            flex: 1;
-        }
-
-        .contact-label {
-            font-size: 0.875rem;
-            color: var(--text-light);
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        .contact-text a {
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.125rem;
-            transition: var(--transition);
-        }
-
-        .contact-text a:hover {
-            color: var(--accent);
-        }
-
-        /* Footer - Version améliorée */
-        .footer {
-            background: var(--bg-dark);
-            color: var(--text-on-dark);
-            padding: 5rem 0 2rem;
-            position: relative;
-        }
-
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--accent), transparent);
-        }
-
-        .footer-container {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr;
-            gap: 4rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-logo {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: white;
-        }
-
-        .footer-tagline {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 1.125rem;
-            line-height: 1.7;
-        }
-
-        .footer-links h4 {
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: white;
-            font-size: 1.125rem;
-        }
-
-        .footer-links ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            transition: var(--transition);
-            font-size: 0.9375rem;
-        }
-
-        .footer-links a:hover {
-            color: white;
-            transform: translateX(5px);
-        }
-
-        .footer-bottom {
-            padding-top: 3rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: center;
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.875rem;
-        }
-
-        /* Back to Top - Version améliorée */
-        .back-to-top {
-            position: fixed;
-            bottom: 2.5rem;
-            right: 2.5rem;
-            width: 56px;
-            height: 56px;
-            background: var(--primary);
-            color: white;
-            border: none;
-            border-radius: 14px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: var(--shadow-lg);
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-            z-index: 999;
-        }
-
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .back-to-top:hover {
-            background: var(--accent);
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-2xl);
-        }
-
-        /* WhatsApp Float - Version améliorée */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 2.5rem;
-            left: 2.5rem;
-            width: 64px;
-            height: 64px;
-            background: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: var(--shadow-lg);
-            z-index: 999;
-            transition: var(--transition);
-            animation: float 3s ease-in-out infinite;
         }
 
         @keyframes float {
@@ -1244,158 +1191,54 @@
             }
         }
 
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
+        /* Utility Classes */
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .about-content,
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 4rem;
-            }
-            
-            .footer-container {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-            
-            .skills-visual {
-                position: static;
-                order: -1;
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-1 { margin-bottom: 0.5rem; }
+        .mb-2 { margin-bottom: 1rem; }
+        .mb-3 { margin-bottom: 1.5rem; }
+        .mb-4 { margin-bottom: 2rem; }
+        .mb-6 { margin-bottom: 3rem; }
+
+        /* Chart Animation */
+        .line-path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: draw 2s ease-out forwards;
+        }
+
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 0;
             }
         }
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 1.5rem;
-            }
-            
-            section {
-                padding: 5rem 0;
-            }
-            
-            .nav {
-                position: fixed;
-                top: 80px;
-                left: 0;
-                right: 0;
-                background: white;
-                box-shadow: var(--shadow-xl);
-                padding: 2rem;
-                transform: translateY(-100%);
-                opacity: 0;
-                visibility: hidden;
-                transition: var(--transition);
-                border-top: 1px solid var(--border);
-            }
-            
-            .nav.active {
-                transform: translateY(0);
+        .data-point {
+            opacity: 0;
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        .data-point:nth-child(1) { animation-delay: 0.2s; }
+        .data-point:nth-child(2) { animation-delay: 0.4s; }
+        .data-point:nth-child(3) { animation-delay: 0.6s; }
+        .data-point:nth-child(4) { animation-delay: 0.8s; }
+        .data-point:nth-child(5) { animation-delay: 1s; }
+        .data-point:nth-child(6) { animation-delay: 1.2s; }
+        .data-point:nth-child(7) { animation-delay: 1.4s; }
+        .data-point:nth-child(8) { animation-delay: 1.6s; }
+
+        @keyframes fadeIn {
+            to {
                 opacity: 1;
-                visibility: visible;
-            }
-            
-            .nav-list {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-            
-            .mobile-menu-toggle {
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
-                background: none;
-                border: none;
-                padding: 0.5rem;
-                cursor: pointer;
-            }
-            
-            .mobile-menu-toggle span {
-                width: 25px;
-                height: 2px;
-                background: var(--text);
-                transition: var(--transition);
-            }
-            
-            .mobile-menu-toggle.active span:nth-child(1) {
-                transform: rotate(45deg) translateY(10px);
-            }
-            
-            .mobile-menu-toggle.active span:nth-child(2) {
-                opacity: 0;
-            }
-            
-            .mobile-menu-toggle.active span:nth-child(3) {
-                transform: rotate(-45deg) translateY(-10px);
-            }
-            
-            .hero-stats {
-                grid-template-columns: 1fr;
-                padding: 2rem;
-            }
-            
-            .stat-item:not(:last-child)::after {
-                display: none;
-            }
-            
-            .services-grid,
-            .projects-grid,
-            .why-grid,
-            .tools-showcase {
-                grid-template-columns: 1fr;
-            }
-            
-            .projects-grid {
-                gap: 2rem;
-            }
-            
-            .testimonial {
-                padding: 3rem 2rem;
-            }
-            
-            .testimonial-quote {
-                font-size: 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 { font-size: 2.5rem; }
-            h2 { font-size: 2rem; }
-            h3 { font-size: 1.5rem; }
-            
-            .hero-subtitle {
-                font-size: 1.125rem;
-            }
-            
-            .stat-number {
-                font-size: 2.5rem;
-            }
-            
-            .section-description {
-                font-size: 1.125rem;
-            }
-            
-            .service-card,
-            .tool-card,
-            .why-card {
-                padding: 2rem;
-            }
-            
-            .whatsapp-float {
-                bottom: 1.5rem;
-                left: 1.5rem;
-                width: 56px;
-                height: 56px;
-            }
-            
-            .back-to-top {
-                bottom: 1.5rem;
-                right: 1.5rem;
-                width: 48px;
-                height: 48px;
             }
         }
     </style>
@@ -1405,19 +1248,17 @@
     <header class="header" id="header">
         <div class="container header-container">
             <a href="#hero" class="logo">
-                <div class="logo-mark">RH</div>
-                <span class="logo-name">Roland Houndété</span>
+                <div class="logo-icon">RH</div>
+                <span class="logo-text">Roland Houndété</span>
             </a>
             
             <nav class="nav" id="nav">
-                <ul class="nav-list">
-                    <li><a href="#hero" class="nav-link">Accueil</a></li>
-                    <li><a href="#about" class="nav-link">À propos</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#tools" class="nav-link">Outils</a></li>
-                    <li><a href="#projects" class="nav-link">Projets</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
+                <a href="#hero" class="nav-link active">Accueil</a>
+                <a href="#about" class="nav-link">À propos</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#tools" class="nav-link">Outils</a>
+                <a href="#projects" class="nav-link">Projets</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </nav>
             
             <button class="mobile-menu-toggle" id="menuToggle">
@@ -1431,52 +1272,83 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-pattern"></div>
-        <div class="container">
+        <div class="container hero-container">
             <div class="hero-content">
                 <div class="hero-badge">
-                    <span class="badge-dot"></span>
-                    Statisticien Freelance • Disponible pour nouveaux projets
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Statisticien Freelance
                 </div>
                 
                 <h1 class="hero-title">
-                    <span>De la donnée brute</span><br>
-                    <span class="gradient-text">à la décision éclairée</span>
+                    De la donnée brute<br>
+                    <span class="gradient">à la décision éclairée</span>
                 </h1>
                 
                 <p class="hero-subtitle">
-                    Statisticien appliqué et analyste de données avec plus de 3 ans d'expérience dans l'analyse statistique, 
-                    la visualisation de données et le soutien académique. Je transforme vos données complexes en insights 
-                    actionnables et compréhensibles.
+                    Statisticien appliqué et analyste de données avec plus de 3 ans d'expérience dans l'analyse statistique, la visualisation de données et le soutien académique.
                 </p>
                 
                 <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="3">3+</div>
-                        <div class="stat-label">Années d'expérience</div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="50">0</span>
+                        <span class="stat-label">Projets réalisés</span>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="50">50+</div>
-                        <div class="stat-label">Projets réalisés</div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="100">0</span>
+                        <span class="stat-label">% Satisfaction</span>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="100">100%</div>
-                        <div class="stat-label">Satisfaction client</div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="3">0</span>
+                        <span class="stat-label">Années expérience</span>
                     </div>
                 </div>
                 
-                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                    <a href="#services" class="btn btn-primary">
-                        Découvrir mes services
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
-                            <path d="M6 12l4-4 4 4" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#contact" class="btn btn-primary">
+                        Discutons de votre projet
                     </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        Me contacter
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
-                            <path d="M2.5 7.5L10 13l7.5-5.5" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
+                    <a href="#projects" class="btn btn-secondary">
+                        Voir mes réalisations
                     </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="data-visualization">
+                    <div class="chart-container">
+                        <svg viewBox="0 0 400 200">
+                            <defs>
+                                <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#2563eb" stop-opacity="0.3"/>
+                                    <stop offset="100%" stop-color="#2563eb" stop-opacity="0"/>
+                                </linearGradient>
+                            </defs>
+                            
+                            <!-- Axes -->
+                            <line x1="50" y1="20" x2="50" y2="180" stroke="#cbd5e1" stroke-width="1"/>
+                            <line x1="50" y1="180" x2="370" y2="180" stroke="#cbd5e1" stroke-width="1"/>
+                            
+                            <!-- Data line -->
+                            <path class="line-path" d="M70,160 L110,140 L150,110 L190,90 L230,70 L270,50 L310,40 L350,30" 
+                                  fill="none" stroke="#2563eb" stroke-width="3"/>
+                            
+                            <!-- Data points -->
+                            <circle class="data-point" cx="70" cy="160" r="4" fill="#2563eb"/>
+                            <circle class="data-point" cx="110" cy="140" r="4" fill="#2563eb"/>
+                            <circle class="data-point" cx="150" cy="110" r="4" fill="#2563eb"/>
+                            <circle class="data-point" cx="190" cy="90" r="4" fill="#2563eb"/>
+                            <circle class="data-point" cx="230" cy="70" r="4" fill="#2563eb"/>
+                            <circle class="data-point" cx="270" cy="50" r="4" fill="#2563eb"/>
+                            <circle class="data-point" cx="310" cy="40" r="4" fill="#2563eb"/>
+                            <circle class="data-point" cx="350" cy="30" r="4" fill="#2563eb"/>
+                            
+                            <!-- Area under curve -->
+                            <path d="M70,160 L110,140 L150,110 L190,90 L230,70 L270,50 L310,40 L350,30 L350,180 L70,180 Z" 
+                                  fill="url(#chartGradient)"/>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1486,56 +1358,86 @@
     <section class="about" id="about">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Expertise & Approche</span>
-                <h2 class="section-title">À propos de moi</h2>
+                <span class="section-subtitle">À propos de moi</span>
+                <h2 class="section-title">Expertise statistique et pédagogique</h2>
                 <p class="section-description">
-                    Passionné par la statistique appliquée et l'analyse de données, je combine rigueur scientifique 
-                    et pédagogie pour rendre l'analyse de données accessible et efficace.
+                    Je combine rigueur scientifique et pédagogie pour transformer des données complexes en insights actionnables.
                 </p>
             </div>
             
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Bonjour et bienvenue sur mon profil. Je suis statisticien appliqué et analyste de données avec plus de 3 ans d'expérience dans l'analyse de données, l'interprétation statistique et le soutien académique.</p>
+            <div class="about-container">
+                <div class="about-content">
+                    <p>
+                        Bonjour et bienvenue sur mon profil. Je suis statisticien appliqué et analyste de données avec plus de 3 ans d'expérience dans l'analyse de données, l'interprétation statistique et le soutien académique.
+                    </p>
                     
-                    <p>Je travaille avec des étudiants et des professionnels sur des projets académiques et pratiques axés sur les données. Mon approche privilégie la clarté, la précision et la pertinence. Mon objectif est simple : fournir un travail précis, clair et bien structuré, vous aidant à aller au-delà des chiffres et à vraiment comprendre vos données.</p>
+                    <p>
+                        Mon approche privilégie la <strong>clarté, la précision et la pertinence</strong>. Je travaille avec des étudiants et des professionnels sur des projets académiques et pratiques axés sur les données, en veillant toujours à ce que les résultats soient compréhensibles et directement exploitables.
+                    </p>
                     
-                    <p>Que vous ayez besoin d'une analyse statistique pour votre recherche, d'un tableau de bord pour votre entreprise, ou d'un soutien académique pour vos études, je m'engage à vous fournir des résultats de qualité, expliqués de manière accessible et adaptés à vos besoins spécifiques.</p>
-                </div>
-                
-                <div class="skills-visual">
-                    <div class="skills-radar">
-                        <div class="radar-container">
-                            <svg class="radar-svg" viewBox="0 0 300 300">
-                                <!-- Grille -->
-                                <circle cx="150" cy="150" r="120" fill="none" stroke="#e2e8f0" stroke-width="1"/>
-                                <circle cx="150" cy="150" r="90" fill="none" stroke="#e2e8f0" stroke-width="1"/>
-                                <circle cx="150" cy="150" r="60" fill="none" stroke="#e2e8f0" stroke-width="1"/>
-                                <circle cx="150" cy="150" r="30" fill="none" stroke="#e2e8f0" stroke-width="1"/>
-                                
-                                <!-- Axes -->
-                                <line x1="150" y1="30" x2="150" y2="270" stroke="#cbd5e1" stroke-width="1"/>
-                                <line x1="30" y1="150" x2="270" y2="150" stroke="#cbd5e1" stroke-width="1"/>
-                                <line x1="210" y1="60" x2="90" y2="240" stroke="#cbd5e1" stroke-width="1"/>
-                                <line x1="90" y1="60" x2="210" y2="240" stroke="#cbd5e1" stroke-width="1"/>
-                                
-                                <!-- Polygon de compétences -->
-                                <polygon class="radar-polygon" points="150,110 190,140 180,190 120,190 110,140" 
-                                        fill="rgba(59, 130, 246, 0.15)" stroke="#3b82f6" stroke-width="3">
-                                    <animate attributeName="points" dur="1.5s" fill="freeze" 
-                                             from="150,150 150,150 150,150 150,150 150,150"
-                                             to="150,110 190,140 180,190 120,190 110,140"/>
-                                </polygon>
-                            </svg>
-                            
-                            <!-- Labels positionnés dynamiquement -->
-                            <div class="radar-label" style="top: 5%; left: 45%;">Statistiques</div>
-                            <div class="radar-label" style="top: 40%; right: 5%;">Analyse</div>
-                            <div class="radar-label" style="bottom: 5%; left: 45%;">Visualisation</div>
-                            <div class="radar-label" style="top: 40%; left: 5%;">Pédagogie</div>
-                            <div class="radar-label" style="top: 15%; left: 15%;">Programmation</div>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <div class="highlight-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Rigueur scientifique</h4>
+                                <p>Méthodologie conforme aux standards académiques les plus exigeants</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight">
+                            <div class="highlight-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Résultats actionnables</h4>
+                                <p>Des insights concrets directement applicables à vos objectifs</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight">
+                            <div class="highlight-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Accompagnement personnalisé</h4>
+                                <p>Support adapté à votre niveau et à vos besoins spécifiques</p>
+                            </div>
                         </div>
                     </div>
+                </div>
+                
+                <div class="skills-radar">
+                    <svg viewBox="0 0 300 300">
+                        <!-- Grille -->
+                        <circle cx="150" cy="150" r="120" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+                        <circle cx="150" cy="150" r="90" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+                        <circle cx="150" cy="150" r="60" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+                        <circle cx="150" cy="150" r="30" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+                        
+                        <!-- Axes -->
+                        <line x1="150" y1="30" x2="150" y2="270" stroke="#cbd5e1" stroke-width="1"/>
+                        <line x1="30" y1="150" x2="270" y2="150" stroke="#cbd5e1" stroke-width="1"/>
+                        <line x1="210" y1="60" x2="90" y2="240" stroke="#cbd5e1" stroke-width="1"/>
+                        <line x1="90" y1="60" x2="210" y2="240" stroke="#cbd5e1" stroke-width="1"/>
+                        
+                        <!-- Radar -->
+                        <polygon points="150,110 190,140 180,190 120,190 110,140" 
+                                fill="rgba(37, 99, 235, 0.2)" stroke="#2563eb" stroke-width="2"/>
+                        
+                        <!-- Labels -->
+                        <text x="150" y="25" text-anchor="middle" fill="#475569" font-size="12" font-weight="600">Statistiques</text>
+                        <text x="265" y="155" text-anchor="end" fill="#475569" font-size="12" font-weight="600">Analyse</text>
+                        <text x="150" y="285" text-anchor="middle" fill="#475569" font-size="12" font-weight="600">Visualisation</text>
+                        <text x="35" y="155" text-anchor="start" fill="#475569" font-size="12" font-weight="600">Pédagogie</text>
+                    </svg>
                 </div>
             </div>
         </div>
@@ -1545,7 +1447,7 @@
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Mes prestations</span>
+                <span class="section-subtitle">Mes prestations</span>
                 <h2 class="section-title">Services spécialisés</h2>
                 <p class="section-description">
                     Une gamme complète de services d'analyse statistique adaptés à vos besoins académiques ou professionnels.
@@ -1555,64 +1457,108 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                     
-                    <h3 class="service-title">Analyse statistique</h3>
+                    <h3>Analyse statistique</h3>
                     
                     <p class="service-description">
-                        Statistiques descriptives et inférentielles, tests d'hypothèses, régression linéaire et logistique, ANOVA et méthodes multivariées.
+                        Statistiques descriptives et inférentielles, tests d'hypothèses, régression, ANOVA et méthodes multivariées.
                     </p>
                     
-                    <ul class="service-features">
-                        <li>Tests paramétriques et non-paramétriques</li>
-                        <li>Modèles de régression avancés</li>
-                        <li>Analyses multivariées complètes</li>
-                        <li>Rapports académiques professionnels</li>
+                    <ul class="service-details">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M5 13l4 4L19 7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Tests paramétriques et non-paramétriques
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M5 13l4 4L19 7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Modèles de régression avancés
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M5 13l4 4L19 7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Analyses multivariées complètes
+                        </li>
                     </ul>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                     
-                    <h3 class="service-title">Visualisation de données</h3>
+                    <h3>Visualisation de données</h3>
                     
                     <p class="service-description">
-                        Création de graphiques professionnels, tableaux de bord interactifs et visualisations percutantes pour présenter vos résultats.
+                        Création de graphiques professionnels, dashboards interactifs et visualisations avancées pour présenter vos résultats.
                     </p>
                     
-                    <ul class="service-features">
-                        <li>Graphiques statistiques standards</li>
-                        <li>Visualisations interactives</li>
-                        <li>Dashboards Excel/Tableau</li>
-                        <li>Infographies personnalisées</li>
+                    <ul class="service-details">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M5 13l4 4L19 7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Graphiques statistiques standards
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M5 13l4 4L19 7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Visualisations interactives
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M5 13l4 4L19 7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Dashboards Excel/Tableau
+                        </li>
                     </ul>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 14l9-5-9-5-9 5 9 5z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 14l9-5-9-5-9 5 9 5zm0 0v6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                     
-                    <h3 class="service-title">Soutien académique</h3>
+                    <h3>Soutien académique</h3>
                     
                     <p class="service-description">
-                        Accompagnement en mathématiques et statistiques pour étudiants de tous niveaux, des devoirs aux mémoires de recherche.
+                        Assistance en statistiques et mathématiques pour étudiants de tous niveaux, des devoirs aux mémoires de recherche.
                     </p>
                     
-                    <ul class="service-features">
-                        <li>Cours particuliers adaptés</li>
-                        <li>Aide aux devoirs et projets</li>
-                        <li>Préparation aux examens</li>
-                        <li>Correction de travaux</li>
+                    <ul class="service-details">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M5 13l4 4L19 7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Cours particuliers
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M5 13l4 4L19 7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Aide aux devoirs
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M5 13l4 4L19 7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Préparation aux examens
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -1623,76 +1569,143 @@
     <section class="tools" id="tools">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Technologies</span>
-                <h2 class="section-title">Ma boîte à outils</h2>
+                <span class="section-subtitle">Ma boîte à outils</span>
+                <h2 class="section-title">Technologies maîtrisées</h2>
                 <p class="section-description">
-                    Expertise approfondie dans les outils statistiques et d'analyse les plus performants du marché.
+                    Une expertise approfondie sur les principaux outils d'analyse statistique et de traitement de données.
                 </p>
             </div>
             
-            <div class="tools-showcase">
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <div class="tool-logo">R</div>
-                        <div class="tool-info">
-                            <h3>R & RStudio</h3>
-                            <span class="tool-category">Analyse statistique avancée</span>
+            <div class="tools-grid">
+                <div class="tools-category">
+                    <h3>Logiciels statistiques</h3>
+                    <div class="tool-items">
+                        <div class="tool-card">
+                            <div class="tool-logo">
+                                <svg viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="40" fill="#276DC3"/>
+                                    <text x="50" y="65" text-anchor="middle" fill="white" font-size="40" font-weight="bold">R</text>
+                                </svg>
+                            </div>
+                            <div class="tool-info">
+                                <h4>R & RStudio</h4>
+                                <p>Analyse statistique avancée</p>
+                                <div class="skill-level">
+                                    <span>Expert</span>
+                                    <div class="skill-dots">
+                                        <div class="skill-dot active"></div>
+                                        <div class="skill-dot active"></div>
+                                        <div class="skill-dot active"></div>
+                                        <div class="skill-dot active"></div>
+                                        <div class="skill-dot active"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tool-card">
+                            <div class="tool-logo">
+                                <svg viewBox="0 0 100 100">
+                                    <path d="M15,85 L85,85 L85,15 L15,15 Z" fill="#3776AB" stroke="#3776AB" stroke-width="2"/>
+                                    <path d="M30,70 L30,30 L50,30 L70,50 L70,70 Z" fill="#FFD43B"/>
+                                    <polygon points="50,30 70,50 50,50" fill="#3776AB"/>
+                                    <polygon points="30,30 50,30 50,50 30,50" fill="#3776AB"/>
+                                </svg>
+                            </div>
+                            <div class="tool-info">
+                                <h4>Python</h4>
+                                <p>Data Science & Machine Learning</p>
+                                <div class="skill-level">
+                                    <span>Avancé</span>
+                                    <div class="skill-dots">
+                                        <div class="skill-dot active"></div>
+                                        <div class="skill-dot active"></div>
+                                        <div class="skill-dot active"></div>
+                                        <div class="skill-dot active"></div>
+                                        <div class="skill-dot"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tool-card">
+                            <div class="tool-logo">
+                                <svg viewBox="0 0 100 100">
+                                    <rect x="20" y="20" width="60" height="60" fill="#1C70B6" rx="5"/>
+                                    <text x="50" y="60" text-anchor="middle" fill="white" font-size="30" font-weight="bold">S</text>
+                                </svg>
+                            </div>
+                            <div class="tool-info">
+                                <h4>SPSS</h4>
+                                <p>Analyse statistique standard</p>
+                                <div class="skill-level">
+                                    <span>Expert</span>
+                                    <div class="skill-dots">
+                                        <div class="skill-dot active"></div>
+                                        <div class="skill-dot active"></div>
+                                        <div class="skill-dot active"></div>
+                                        <div class="skill-dot active"></div>
+                                        <div class="skill-dot active"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <ul class="tool-features">
-                        <li>Modélisation statistique complète</li>
-                        <li>Visualisation avec ggplot2</li>
-                        <li>Analyse de données complexes</li>
-                        <li>Rapports reproductibles (RMarkdown)</li>
-                    </ul>
                 </div>
-
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <div class="tool-logo">Py</div>
-                        <div class="tool-info">
-                            <h3>Python</h3>
-                            <span class="tool-category">Data Science & Machine Learning</span>
+                
+                <div class="tools-category">
+                    <h3>Outils bureautiques</h3>
+                    <div class="tool-items">
+                        <div class="tool-card">
+                            <div class="tool-logo">
+                                <svg viewBox="0 0 100 100">
+                                    <path d="M20,20 L80,20 L80,80 L20,80 Z" fill="#217346"/>
+                                    <path d="M30,30 L70,30 L70,70 L30,70 Z" fill="#29B74F"/>
+                                    <path d="M35,35 L65,35 L65,65 L35,65 Z" fill="white"/>
+                                    <path d="M40,40 L60,40 L60,60 L40,60 Z" fill="#29B74F"/>
+                                </svg>
+                            </div>
+                            <div class="tool-info">
+                                <h4>Excel Avancé</h4>
+                                <p>Formules complexes, tableaux croisés</p>
+                                <div class="skill-level">
+                                    <span>Expert</span>
+                                    <div class="skill-dots">
+                                        <div class="skill-dot active"></div>
+                                        <div class="skill-dot active"></div>
+                                        <div class="skill-dot active"></div>
+                                        <div class="skill-dot active"></div>
+                                        <div class="skill-dot active"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tool-card">
+                            <div class="tool-logo">
+                                <svg viewBox="0 0 100 100">
+                                    <path d="M20,20 L80,20 L80,80 L20,80 Z" fill="#2B579A"/>
+                                    <path d="M30,30 L70,30 L70,70 L30,70 Z" fill="#31A6F6"/>
+                                    <path d="M35,35 L65,35 L65,65 L35,65 Z" fill="white"/>
+                                    <path d="M40,40 L60,40 L60,60 L40,60 Z" fill="#31A6F6"/>
+                                </svg>
+                            </div>
+                            <div class="tool-info">
+                                <h4>Word</h4>
+                                <p>Rédaction scientifique</p>
+                                <div class="skill-level">
+                                    <span>Expert</span>
+                                    <div class="skill-dots">
+                                        <div class="skill-dot active"></div>
+                                        <div class="skill-dot active"></div>
+                                        <div class="skill-dot active"></div>
+                                        <div class="skill-dot active"></div>
+                                        <div class="skill-dot active"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <ul class="tool-features">
-                        <li>Pandas & NumPy pour l'analyse</li>
-                        <li>Scikit-learn pour le machine learning</li>
-                        <li>Matplotlib & Seaborn pour la viz</li>
-                        <li>Automatisation de workflows</li>
-                    </ul>
-                </div>
-
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <div class="tool-logo">SP</div>
-                        <div class="tool-info">
-                            <h3>SPSS</h3>
-                            <span class="tool-category">Statistiques appliquées</span>
-                        </div>
-                    </div>
-                    <ul class="tool-features">
-                        <li>Tests d'hypothèses complets</li>
-                        <li>ANOVA & régression multiple</li>
-                        <li>Analyses factorielles</li>
-                        <li>Rapports professionnels automatisés</li>
-                    </ul>
-                </div>
-
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <div class="tool-logo">XL</div>
-                        <div class="tool-info">
-                            <h3>Excel Avancé</h3>
-                            <span class="tool-category">Analyse & Visualisation</span>
-                        </div>
-                    </div>
-                    <ul class="tool-features">
-                        <li>Tableaux croisés dynamiques</li>
-                        <li>Formules complexes et matrices</li>
-                        <li>Macros & VBA pour l'automatisation</li>
-                        <li>Dashboards interactifs</li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -1702,144 +1715,102 @@
     <section class="projects" id="projects">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Portfolio</span>
+                <span class="section-subtitle">Portfolio</span>
                 <h2 class="section-title">Réalisations récentes</h2>
                 <p class="section-description">
-                    Quelques projets représentatifs de mon expertise en analyse de données et statistiques appliquées.
+                    Exemples concrets de projets d'analyse statistique et de visualisation de données.
                 </p>
             </div>
             
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-visual">
-                        <svg class="project-graph" viewBox="0 0 200 120" fill="none">
-                            <defs>
-                                <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
-                                    <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.3"/>
-                                    <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
-                                </linearGradient>
-                            </defs>
-                            <path d="M20 100L60 60L100 80L140 40L180 20" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" fill="none"/>
-                            <path d="M20 100L60 60L100 80L140 40L180 20L180 120L20 120Z" fill="url(#grad1)"/>
-                            <circle cx="20" cy="100" r="5" fill="#3b82f6"/>
-                            <circle cx="60" cy="60" r="5" fill="#3b82f6"/>
-                            <circle cx="100" cy="80" r="5" fill="#3b82f6"/>
-                            <circle cx="140" cy="40" r="5" fill="#3b82f6"/>
-                            <circle cx="180" cy="20" r="5" fill="#3b82f6"/>
-                        </svg>
+                        <div class="project-pattern"></div>
                     </div>
                     <div class="project-content">
                         <div class="project-tags">
-                            <span class="tag tag-primary">R</span>
+                            <span class="tag primary">R</span>
                             <span class="tag">Régression</span>
                             <span class="tag">ggplot2</span>
                         </div>
-                        <h3 class="project-title">Analyse de régression avancée</h3>
+                        <h3>Analyse de régression avancée</h3>
                         <p class="project-description">
-                            Modélisation prédictive avec régression multiple, analyse des résidus, validation des hypothèses et interprétation complète des résultats.
+                            Modélisation prédictive avec régression multiple, analyse des résidus et validation des hypothèses statistiques.
                         </p>
                         <div class="project-meta">
-                            <div class="project-meta-item">
-                                <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                Tests d'hypothèses complets
+                                R, ggplot2, dplyr
                             </div>
-                            <div class="project-meta-item">
-                                <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                Visualisations professionnelles
-                            </div>
-                            <div class="project-meta-item">
-                                <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                                </svg>
-                                Rapport académique complet
+                                2 semaines
                             </div>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="project-card">
                     <div class="project-visual">
-                        <svg class="project-graph" viewBox="0 0 200 120" fill="none">
-                            <rect x="30" y="60" width="25" height="40" fill="#3b82f6" opacity="0.7"/>
-                            <rect x="65" y="40" width="25" height="60" fill="#3b82f6" opacity="0.8"/>
-                            <rect x="100" y="20" width="25" height="80" fill="#3b82f6" opacity="0.9"/>
-                            <rect x="135" y="30" width="25" height="70" fill="#3b82f6"/>
-                        </svg>
+                        <div class="project-pattern"></div>
                     </div>
                     <div class="project-content">
                         <div class="project-tags">
-                            <span class="tag tag-primary">Excel</span>
+                            <span class="tag primary">Excel</span>
                             <span class="tag">Dashboard</span>
-                            <span class="tag">VBA</span>
+                            <span class="tag">KPI</span>
                         </div>
-                        <h3 class="project-title">Dashboard Excel interactif</h3>
+                        <h3>Dashboard de suivi KPI</h3>
                         <p class="project-description">
-                            Tableau de bord dynamique pour le suivi d'indicateurs clés avec graphiques automatisés, filtres interactifs et macros VBA.
+                            Tableau de bord interactif avec graphiques dynamiques, tableaux croisés et automatisation des rapports.
                         </p>
                         <div class="project-meta">
-                            <div class="project-meta-item">
-                                <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                Graphiques dynamiques
+                                Excel Avancé, Power Query
                             </div>
-                            <div class="project-meta-item">
-                                <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                Automatisation complète
-                            </div>
-                            <div class="project-meta-item">
-                                <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                                </svg>
-                                Interface utilisateur intuitive
+                                1 semaine
                             </div>
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="project-card">
                     <div class="project-visual">
-                        <svg class="project-graph" viewBox="0 0 200 120" fill="none">
-                            <path d="M20 100Q60 20 100 60T180 40" stroke="#3b82f6" stroke-width="3" fill="none"/>
-                            <circle cx="20" cy="100" r="6" fill="#3b82f6"/>
-                            <circle cx="100" cy="60" r="6" fill="#3b82f6"/>
-                            <circle cx="180" cy="40" r="6" fill="#3b82f6"/>
-                        </svg>
+                        <div class="project-pattern"></div>
                     </div>
                     <div class="project-content">
                         <div class="project-tags">
-                            <span class="tag tag-primary">SPSS</span>
-                            <span class="tag">Tests</span>
+                            <span class="tag primary">SPSS</span>
                             <span class="tag">ANOVA</span>
+                            <span class="tag">Rapport</span>
                         </div>
-                        <h3 class="project-title">Rapport statistique académique</h3>
+                        <h3>Analyse comparative avec SPSS</h3>
                         <p class="project-description">
-                            Analyse complète avec SPSS incluant tests paramétriques, ANOVA et interprétations détaillées pour mémoire de master en sciences sociales.
+                            Étude comparative avec ANOVA, tests post-hoc et rapport détaillé d'interprétation des résultats.
                         </p>
                         <div class="project-meta">
-                            <div class="project-meta-item">
-                                <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                Tests d'hypothèses multiples
+                                SPSS, Tests paramétriques
                             </div>
-                            <div class="project-meta-item">
-                                <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            <div class="meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                Analyse factorielle complète
-                            </div>
-                            <div class="project-meta-item">
-                                <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                                </svg>
-                                Rapport académique complet
+                                10 jours
                             </div>
                         </div>
                     </div>
@@ -1848,62 +1819,57 @@
         </div>
     </section>
 
-    <!-- Why Me Section -->
-    <section class="why-me">
+    <!-- Process Section -->
+    <section class="process">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Mes engagements</span>
-                <h2 class="section-title">Pourquoi me choisir ?</h2>
+                <span class="section-subtitle">Méthodologie</span>
+                <h2 class="section-title">Approche structurée</h2>
+                <p class="section-description">
+                    Un processus clair et transparent pour garantir la qualité et la pertinence de chaque projet.
+                </p>
             </div>
             
-            <div class="why-grid">
-                <div class="why-card">
-                    <div class="why-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Analyse des besoins</h3>
+                        <p>Compréhension approfondie de vos objectifs, de vos données et de vos contraintes spécifiques.</p>
                     </div>
-                    <h3 class="why-title">Fiabilité et rigueur</h3>
-                    <p class="why-description">Travail minutieux et précis, respectant les normes académiques et professionnelles les plus exigeantes. Chaque analyse est validée et vérifiée.</p>
                 </div>
                 
-                <div class="why-card">
-                    <div class="why-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Proposition détaillée</h3>
+                        <p>Devis clair avec méthodologie, livrables attendus et échéancier précis.</p>
                     </div>
-                    <h3 class="why-title">Respect des délais</h3>
-                    <p class="why-description">Livraison dans les temps convenus, avec suivi régulier et possibilité de révisions pour garantir votre satisfaction complète.</p>
                 </div>
                 
-                <div class="why-card">
-                    <div class="why-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-                        </svg>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Analyse rigoureuse</h3>
+                        <p>Application des méthodes statistiques appropriées avec vérification systématique des hypothèses.</p>
                     </div>
-                    <h3 class="why-title">Communication claire</h3>
-                    <p class="why-description">Disponibilité et réactivité pour répondre à vos questions, vous tenir informé de l'avancement et expliquer les résultats de manière accessible.</p>
                 </div>
                 
-                <div class="why-card">
-                    <div class="why-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/>
-                            <path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/>
-                        </svg>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Validation des résultats</h3>
+                        <p>Vérification de la robustesse des analyses et validation croisée des résultats obtenus.</p>
                     </div>
-                    <h3 class="why-title">Solutions sur mesure</h3>
-                    <p class="why-description">Approche personnalisée adaptée à vos besoins spécifiques, vos objectifs particuliers et votre niveau de compréhension.</p>
                 </div>
-            </div>
-            
-            <div class="testimonial">
-                <blockquote class="testimonial-quote">
-                    Sur Upwork, je privilégie la collaboration basée sur la confiance, la clarté et l'obtention de résultats significatifs. 
-                    Chaque projet est une opportunité d'apporter une réelle valeur ajoutée à mes clients.
-                </blockquote>
+                
+                <div class="process-step">
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                        <h3>Livraison et support</h3>
+                        <p>Remise du rapport complet avec explications détaillées et support pour l'interprétation.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1912,114 +1878,110 @@
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Contact</span>
-                <h2 class="section-title">Discutons de votre projet</h2>
+                <span class="section-subtitle">Contact</span>
+                <h2 class="section-title">Travaillons ensemble</h2>
                 <p class="section-description">
-                    Prêt à transformer vos données en insights actionnables ? Contactez-moi pour discuter de votre projet.
+                    Discutons de votre projet et voyons comment je peux vous aider à transformer vos données en insights.
                 </p>
             </div>
             
-            <div class="contact-content">
+            <div class="contact-container">
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
-                        <label for="name" class="form-label">Nom complet *</label>
-                        <input type="text" id="name" class="form-input" required placeholder="Votre nom et prénom">
+                        <label for="name" class="form-label">Nom complet</label>
+                        <input type="text" id="name" class="form-input" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="email" class="form-label">Adresse email *</label>
-                        <input type="email" id="email" class="form-input" required placeholder="votre@email.com">
+                        <label for="email" class="form-label">Adresse email</label>
+                        <input type="email" id="email" class="form-input" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="project" class="form-label">Type de projet *</label>
+                        <label for="project" class="form-label">Type de projet</label>
                         <select id="project" class="form-select" required>
-                            <option value="">Sélectionnez un type de projet</option>
+                            <option value="">Sélectionnez un type</option>
                             <option value="analyse">Analyse statistique</option>
                             <option value="visualisation">Visualisation de données</option>
                             <option value="soutien">Soutien académique</option>
                             <option value="relecture">Relecture scientifique</option>
-                            <option value="dashboard">Création de dashboard</option>
-                            <option value="autre">Autre projet</option>
+                            <option value="autre">Autre</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label for="message" class="form-label">Détails de votre projet *</label>
-                        <textarea id="message" class="form-textarea" rows="6" required placeholder="Décrivez votre projet, vos objectifs, vos délais..."></textarea>
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" class="form-textarea" rows="5" required></textarea>
                     </div>
                     
                     <button type="submit" class="btn btn-primary">
                         Envoyer le message
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
-                            <path d="M2.5 7.5L10 13l7.5-5.5" stroke-width="2" stroke-linecap="round"/>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="18" height="18">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
                 </form>
                 
                 <div class="contact-info">
-                    <h3 class="contact-info-title">Informations de contact</h3>
-                    
                     <div class="contact-details">
                         <div class="contact-item">
                             <div class="contact-icon">
-                                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </div>
                             <div class="contact-text">
-                                <div class="contact-label">Email professionnel</div>
+                                <div class="contact-label">Email</div>
                                 <a href="mailto:houndeteroland551@gmail.com">houndeteroland551@gmail.com</a>
                             </div>
                         </div>
                         
                         <div class="contact-item">
                             <div class="contact-icon">
-                                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </div>
                             <div class="contact-text">
-                                <div class="contact-label">Téléphone / WhatsApp</div>
+                                <div class="contact-label">Téléphone</div>
                                 <a href="tel:+2290168784884">+229 01 68 78 48 84</a>
                             </div>
                         </div>
                         
                         <div class="contact-item">
                             <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </div>
                             <div class="contact-text">
-                                <div class="contact-label">WhatsApp Business</div>
+                                <div class="contact-label">WhatsApp</div>
                                 <a href="https://wa.me/22901533738" target="_blank">+229 01 53 37 38 48</a>
                             </div>
                         </div>
                         
                         <div class="contact-item">
                             <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
-                                    <circle cx="4" cy="4" r="2"/>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="4" cy="4" r="2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </div>
                             <div class="contact-text">
-                                <div class="contact-label">LinkedIn Professionnel</div>
+                                <div class="contact-label">LinkedIn</div>
                                 <a href="https://www.linkedin.com/in/roland-houndete-a77807285" target="_blank">Roland HOUNDETE</a>
                             </div>
                         </div>
                         
                         <div class="contact-item">
                             <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </div>
                             <div class="contact-text">
-                                <div class="contact-label">Upwork Freelance</div>
-                                <a href="https://www.upwork.com/freelancers/~01bd4c97f21a82c7d9" target="_blank">Voir mon profil Upwork</a>
+                                <div class="contact-label">Upwork</div>
+                                <a href="https://www.upwork.com/freelancers/~01bd4c97f21a82c7d9" target="_blank">Voir mon profil</a>
                             </div>
                         </div>
                     </div>
@@ -2033,10 +1995,12 @@
         <div class="container">
             <div class="footer-container">
                 <div class="footer-brand">
-                    <div class="footer-logo">Roland Houndété</div>
+                    <a href="#hero" class="logo">
+                        <div class="logo-icon">RH</div>
+                        <span class="logo-text">Roland Houndété</span>
+                    </a>
                     <p class="footer-tagline">
-                        Statisticien appliqué et analyste de données. Je transforme vos données complexes en insights 
-                        actionnables grâce à une expertise statistique rigoureuse et une approche pédagogique.
+                        Transformons vos données en décisions éclairées grâce à une analyse statistique rigoureuse et pédagogique.
                     </p>
                 </div>
                 
@@ -2052,38 +2016,52 @@
                     </ul>
                 </div>
                 
-                <div class="footer-links">
-                    <h4>Réseaux & Contact</h4>
-                    <ul>
-                        <li><a href="mailto:houndeteroland551@gmail.com">Email Professionnel</a></li>
-                        <li><a href="https://www.linkedin.com/in/roland-houndete-a77807285" target="_blank">LinkedIn</a></li>
-                        <li><a href="https://www.upwork.com/freelancers/~01bd4c97f21a82c7d9" target="_blank">Upwork</a></li>
-                        <li><a href="https://wa.me/22901533738" target="_blank">WhatsApp Business</a></li>
-                    </ul>
+                <div class="footer-social">
+                    <h4>Réseaux</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/roland-houndete-a77807285" target="_blank" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="4" cy="4" r="2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://www.upwork.com/freelancers/~01bd4c97f21a82c7d9" target="_blank" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Upwork
+                        </a>
+                        <a href="https://wa.me/22901533738" target="_blank" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            WhatsApp
+                        </a>
+                    </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Roland HOUNDETE | Statisticien & Analyste de Données - Tous droits réservés</p>
+                <p>&copy; 2024 Roland HOUNDETE. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 15l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M5 15l7-7 7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     </button>
 
     <!-- WhatsApp Float Button -->
     <a href="https://wa.me/22901533738" class="whatsapp-float" target="_blank">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+        <svg viewBox="0 0 24 24" fill="white">
             <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
         </svg>
     </a>
 
-    <!-- JavaScript -->
     <script>
         // DOM Elements
         const header = document.getElementById('header');
@@ -2179,20 +2157,20 @@
         // Animate counters
         function animateCounters() {
             const counters = document.querySelectorAll('.stat-number');
+            const speed = 200;
             
             counters.forEach(counter => {
-                const target = parseInt(counter.getAttribute('data-count'));
-                const suffix = counter.textContent.replace(/[0-9]/g, '');
+                const target = parseInt(counter.getAttribute('data-target'));
+                const increment = target / speed;
                 let current = 0;
-                const increment = target / 50;
                 
                 const updateCounter = () => {
                     if (current < target) {
                         current += increment;
-                        counter.textContent = Math.floor(current) + suffix;
-                        setTimeout(updateCounter, 30);
+                        counter.textContent = Math.floor(current);
+                        setTimeout(updateCounter, 10);
                     } else {
-                        counter.textContent = target + suffix;
+                        counter.textContent = target;
                     }
                 };
                 
@@ -2222,7 +2200,7 @@
         
         // Observe elements for animation
         const animatedElements = document.querySelectorAll(
-            '.service-card, .project-card, .why-card, .tool-card, .radar-polygon'
+            '.service-card, .project-card, .highlight, .tool-card, .process-step'
         );
         
         animatedElements.forEach(el => {
@@ -2259,7 +2237,7 @@
             contactForm.reset();
             
             // Show confirmation
-            alert('Votre message va être envoyé via votre client email. Je vous répondrai dans les plus brefs délais !');
+            alert('Votre message va être envoyé via votre client email. Merci de votre intérêt !');
         });
         
         // Initialize animations
@@ -2281,7 +2259,7 @@
             }
         });
         
-        console.log('🚀 Portfolio Roland HOUNDETE chargé avec succès !');
+        console.log('✅ Portfolio professionnel chargé avec succès');
     </script>
 </body>
 </html>
